@@ -1,6 +1,6 @@
 # SpeechAid
 
-To Run locally first clone the project then type the following commands:
+To run locally first clone the project then type the following commands:
 
 `npm install`
 
