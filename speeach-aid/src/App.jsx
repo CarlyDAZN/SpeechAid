@@ -8,15 +8,21 @@ const bingImage = require('./watch_bing.png');
 class App extends Component {
   state = {
     soundClips: [
-      {clip: bingSound, image: bingImage} // add this (clip) to the button prop
+      { clip: bingSound, image: bingImage } // add this (clip) to the button prop
     ]
+  }
+
+  changeClipHandler= () => {
+    console.log('I was clicked!')
   }
 
   render() {
     return (
       <div className="App">
-      <Image image={this.state.soundClips[0].image}/>
-      <Audio clip={this.state.soundClips[0].clip} />
+        <button onClick={this.changeClipHandler}>
+          <Image image={this.state.soundClips[0].image} />
+          <Audio clip={this.state.soundClips[0].clip} />
+        </button>
       </div>
     );
   }
