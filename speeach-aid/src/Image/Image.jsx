@@ -1,9 +1,8 @@
 import React from 'react';
-import bing from './watch_bing.png';
 
-function Image() {
+function Image(props) {
   return (
-          <img src={bing} className="bingImage" alt="Bing Bunny" />
+          <img src={props.image} className="bingImage" alt="Bing Bunny" />
         );
 }
 

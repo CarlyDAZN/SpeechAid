@@ -2,19 +2,20 @@ import React, { Component } from 'react';
 import Image from './Image/Image';
 import Audio from './Audio/Audio';
 
-const bing = require("./Binggg.m4a");
+const bingSound = require("./Binggg.m4a");
+const bingImage = require('./watch_bing.png');
 
 class App extends Component {
   state = {
     soundClips: [
-      {clip: bing} // add this (clip) to the button prop
+      {clip: bingSound, image: bingImage} // add this (clip) to the button prop
     ]
   }
 
   render() {
     return (
       <div className="App">
-      <Image />
+      <Image image={this.state.soundClips[0].image}/>
       <Audio clip={this.state.soundClips[0].clip} />
       </div>
     );
